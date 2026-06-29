@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hichem Chalghoumi — Développeur Web PHP Senior. Expert WordPress, PrestaShop, Drupal, Magento. 14 ans d'expérience. France, Tunisie, Suisse, Belgique." />
+  <title>Hichem Chalghoumi — Développeur Web PHP Senior</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+<!-- ============================
+     NAVBAR
+============================= -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">&#60; HC /&#62;</a>
+
+  <ul class="nav-links">
+    <li><a href="#about"      class="nav-link" data-i18n="nav_about">À propos</a></li>
+    <li><a href="#skills"     class="nav-link" data-i18n="nav_skills">Compétences</a></li>
+    <li><a href="#projects"   class="nav-link" data-i18n="nav_projects">Réalisations</a></li>
+    <li><a href="#experience" class="nav-link" data-i18n="nav_experience">Expérience</a></li>
+    <li><a href="#contact"    class="nav-link" data-i18n="nav_contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-controls">
+    <button class="lang-btn active" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+
+    <button id="theme-toggle" title="Toggle theme">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path id="theme-icon" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+      </svg>
+    </button>
+
+    <button id="menu-toggle" aria-label="Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu">
+  <a href="#about"      class="nav-link" data-i18n="nav_about">À propos</a>
+  <a href="#skills"     class="nav-link" data-i18n="nav_skills">Compétences</a>
+  <a href="#projects"   class="nav-link" data-i18n="nav_projects">Réalisations</a>
+  <a href="#experience" class="nav-link" data-i18n="nav_experience">Expérience</a>
+  <a href="#contact"    class="nav-link" data-i18n="nav_contact">Contact</a>
+  <div style="display:flex;gap:.5rem;padding-top:.5rem;border-top:1px solid var(--border)">
+    <button class="lang-btn active" data-lang="fr">FR</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+  </div>
+</div>
+
+
+<!-- ============================
+     HERO
+============================= -->
+<section id="hero">
+  <span class="hero-available">
+    <span class="pulse-dot"></span>
+    <span data-i18n="hero_available">Disponible pour missions freelance</span>
+  </span>
+
+  <div class="hero-name">
+    <span class="first">Hichem</span><br/>
+    <span class="last">Chalghoumi</span>
+  </div>
+
+  <p class="hero-typewriter"><span id="typewriter"></span></p>
+  <p class="hero-subtitle" data-i18n="hero_subtitle">14 ans d'expérience — CMS · E-commerce · Solutions sur mesure</p>
+
+  <div class="hero-ctas">
+    <a href="#projects" class="btn-primary">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/>
+      </svg>
+      <span data-i18n="hero_cta_projects">Voir mes réalisations</span>
+    </a>
+    <a href="#contact" class="btn-outline">
+      <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+        <polyline points="22,6 12,13 2,6"/>
+      </svg>
+      <span data-i18n="hero_cta_contact">Me contacter</span>
+    </a>
+  </div>
+
+  <div id="stats">
+    <div class="stat">
+      <div class="stat-num"><span id="counter-years">14</span></div>
+      <div class="stat-lbl" data-i18n="hero_years_label">ans d'expérience</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span id="counter-projects">200</span>+</div>
+      <div class="stat-lbl" data-i18n="hero_projects_label">projets livrés</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num"><span id="counter-countries">4</span></div>
+      <div class="stat-lbl" data-i18n="hero_countries_label">pays clients</div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-arrow"></div>
+    <span>scroll</span>
+  </div>
+</section>
+
+
+<!-- ============================
+     ABOUT
+============================= -->
+<section id="about">
+  <div class="container">
+    <div class="section-label"><span data-i18n="nav_about">À propos</span></div>
+    <h2 class="section-title" data-i18n="about_title">À propos de moi</h2>
+
+    <div class="about-grid">
+      <!-- Left: avatar + flags -->
+      <div class="avatar-wrap reveal">
+        <div class="avatar">
+          <!-- Replace with: <img src="images/photo.jpg" alt="Hichem Chalghoumi" /> -->
+          <span class="avatar-placeholder">HC</span>
+        </div>
+
+        <div class="country-flags">
+          <span class="country-badge">&#127467;&#127479; France</span>
+          <span class="country-badge">&#127481;&#127475; Tunisie</span>
+          <span class="country-badge">&#127464;&#127469; Suisse</span>
+          <span class="country-badge">&#127463;&#127466; Belgique</span>
+        </div>
+      </div>
+
+      <!-- Right: bio + infos -->
+      <div class="about-bio">
+        <p class="reveal delay-1" data-i18n="about_bio1">Développeur Web PHP Senior basé à Bizerte, Tunisie, avec plus de 14 ans d'expérience dans la conception et le développement d'applications web complexes.</p>
+        <p class="reveal delay-2" data-i18n="about_bio2">Passionné par les technologies open source, j'interviens sur des projets CMS (WordPress, Drupal, PrestaShop, Magento), du développement sur mesure et des intégrations API.</p>
+        <p class="reveal delay-3" data-i18n="about_bio3">Je combine rigueur technique, sens du détail et capacité à livrer des projets de qualité dans les délais impartis.</p>
+
+        <div class="about-infos reveal delay-2">
+          <div class="about-info">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span><strong data-i18n="about_location">Bizerte, Tunisie</strong></span>
+          </div>
+          <div class="about-info">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span><strong data-i18n="about_experience">14 ans d'expérience</strong></span>
+          </div>
+          <div class="about-info">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <span><a href="mailto:hichem.chalgoumi.apple@gmail.com" style="color:var(--cyan)">hichem.chalgoumi.apple@gmail.com</a></span>
+          </div>
+          <div class="about-info">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L9.91 10a16 16 0 006.09 6.09l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+            <span><strong data-i18n="about_phone">+216 53 402 601</strong></span>
+          </div>
+          <div class="about-info">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+            <span><strong data-i18n="about_projects">200+ projets livrés</strong></span>
+          </div>
+          <div class="about-info">
+            <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+            <span><a href="https://www.linkedin.com/in/chalgoumi-hichem" target="_blank" rel="noopener" style="color:var(--cyan)">chalgoumi-hichem</a></span>
+          </div>
+        </div>
+
+        <a href="#contact" class="btn-primary reveal delay-4" style="width:fit-content" data-i18n="about_contact_btn">Me contacter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     SKILLS
+============================= -->
+<section id="skills">
+  <div class="container">
+    <div class="section-label"><span data-i18n="nav_skills">Compétences</span></div>
+    <h2 class="section-title" data-i18n="skills_title">Compétences techniques</h2>
+
+    <div class="skills-grid">
+
+      <!-- Back-end -->
+      <div class="skill-card reveal">
+        <div class="skill-card-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+          </svg>
+          <span data-i18n="skills_backend">Back-end</span>
+        </div>
+        <div class="skill-row"><div class="skill-row-head"><span>PHP</span><span>98%</span></div><div class="skill-track"><div class="skill-fill" data-pct="98"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>MySQL / MariaDB</span><span>92%</span></div><div class="skill-track"><div class="skill-fill" data-pct="92"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Laravel</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" data-pct="80"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>API REST</span><span>88%</span></div><div class="skill-track"><div class="skill-fill" data-pct="88"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Python (bases)</span><span>45%</span></div><div class="skill-track"><div class="skill-fill" data-pct="45"></div></div></div>
+      </div>
+
+      <!-- Front-end -->
+      <div class="skill-card reveal delay-1">
+        <div class="skill-card-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <span data-i18n="skills_frontend">Front-end</span>
+        </div>
+        <div class="skill-row"><div class="skill-row-head"><span>HTML5 / CSS3</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" data-pct="95"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>JavaScript / jQuery</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" data-pct="90"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Tailwind CSS</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" data-pct="85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Bootstrap</span><span>88%</span></div><div class="skill-track"><div class="skill-fill" data-pct="88"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Sass / LESS</span><span>75%</span></div><div class="skill-track"><div class="skill-fill" data-pct="75"></div></div></div>
+      </div>
+
+      <!-- CMS & E-commerce -->
+      <div class="skill-card reveal delay-2">
+        <div class="skill-card-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/>
+          </svg>
+          <span data-i18n="skills_cms">CMS &amp; E-commerce</span>
+        </div>
+        <div class="skill-row"><div class="skill-row-head"><span>WordPress</span><span>99%</span></div><div class="skill-track"><div class="skill-fill" data-pct="99"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>PrestaShop</span><span>95%</span></div><div class="skill-track"><div class="skill-fill" data-pct="95"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Drupal</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" data-pct="85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Magento</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" data-pct="80"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Joomla</span><span>70%</span></div><div class="skill-track"><div class="skill-fill" data-pct="70"></div></div></div>
+      </div>
+
+      <!-- Outils & DevOps -->
+      <div class="skill-card reveal delay-3">
+        <div class="skill-card-title">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/>
+          </svg>
+          <span data-i18n="skills_devops">Outils &amp; DevOps</span>
+        </div>
+        <div class="skill-row"><div class="skill-row-head"><span>Git / GitHub</span><span>90%</span></div><div class="skill-track"><div class="skill-fill" data-pct="90"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Linux / SSH</span><span>85%</span></div><div class="skill-track"><div class="skill-fill" data-pct="85"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Nginx / Apache</span><span>80%</span></div><div class="skill-track"><div class="skill-fill" data-pct="80"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Docker</span><span>70%</span></div><div class="skill-track"><div class="skill-fill" data-pct="70"></div></div></div>
+        <div class="skill-row"><div class="skill-row-head"><span>Figma / XD</span><span>65%</span></div><div class="skill-track"><div class="skill-fill" data-pct="65"></div></div></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     PROJECTS
+============================= -->
+<section id="projects">
+  <div class="container">
+    <div class="section-label"><span data-i18n="nav_projects">Réalisations</span></div>
+    <h2 class="section-title" data-i18n="projects_title">Mes Réalisations</h2>
+
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all"       data-i18n="filter_all">Tous</button>
+      <button class="filter-btn"        data-filter="cms"       data-i18n="filter_cms">CMS</button>
+      <button class="filter-btn"        data-filter="ecommerce" data-i18n="filter_ecommerce">E-commerce</button>
+      <button class="filter-btn"        data-filter="custom"    data-i18n="filter_custom">Sur mesure</button>
+      <button class="filter-btn"        data-filter="web"       data-i18n="filter_web">Sites Web</button>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- === ATTITUDEWEB4 PROJECTS === -->
+
+      <div class="project-card reveal" data-cat="cms"
+           data-title="Raymond James"
+           data-type="DRUPAL"
+           data-desc="Site en Drupal pour le cabinet de conseil financier Raymond James. Développement de modules sur mesure et intégration avec les outils métiers."
+           data-tags="Drupal,PHP,MySQL"
+           data-color="#1e3a5f">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1e3a5f,#0a1628)">
+          <span class="project-thumb-initials">RJ</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Drupal</span><span class="project-tag">PHP</span></div>
+          <h3 class="project-name">Raymond James</h3>
+          <p class="project-desc">Site en Drupal pour le cabinet de conseil financier Raymond James.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="web"
+           data-title="Jean-Claude Biguine"
+           data-type="SITE VITRINE"
+           data-desc="Site vitrine de la marque Jean-Claude Biguine et intranet professionnel du réseau de franchisés. Design élégant et administration simplifiée."
+           data-tags="WordPress,PHP,CSS"
+           data-color="#3d1f47">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3d1f47,#1a0a22)">
+          <span class="project-thumb-initials">JCB</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Site Vitrine</span><span class="project-tag">WordPress</span></div>
+          <h3 class="project-name">Jean-Claude Biguine</h3>
+          <p class="project-desc">Site vitrine de la marque et intranet professionnel du réseau de franchisés.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2" data-cat="ecommerce"
+           data-title="Laverdure"
+           data-type="PRESTASHOP · MÉTIERS D'ART"
+           data-desc="Boutique e-commerce de fournitures pour les métiers d'art, développée avec PrestaShop. Catalogue produits étendu et gestion des stocks avancée."
+           data-tags="PrestaShop,PHP,MySQL"
+           data-color="#1a3a2e">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a3a2e,#081812)">
+          <span class="project-thumb-initials">LV</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">Métiers d'art</span></div>
+          <h3 class="project-name">Laverdure</h3>
+          <p class="project-desc">Boutique e-commerce de fournitures pour les métiers d'art.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ecommerce"
+           data-title="Biguine Store"
+           data-type="PRESTASHOP"
+           data-desc="Boutique en ligne propulsée par PrestaShop pour la marque Biguine. Personnalisation complète du thème et modules de paiement intégrés."
+           data-tags="PrestaShop,PHP,MySQL,Bootstrap"
+           data-color="#3a1f1f">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a1f1f,#1a0a0a)">
+          <span class="project-thumb-initials">BS</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">PHP</span></div>
+          <h3 class="project-name">Biguine Store</h3>
+          <p class="project-desc">Boutique en ligne propulsée par PrestaShop pour la marque Biguine.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="web"
+           data-title="Centre National du Costume de Scène"
+           data-type="MUSÉE"
+           data-desc="Site vitrine du musée national dédié au costume de scène. Interface soignée mettant en valeur les collections et les expositions."
+           data-tags="WordPress,PHP,ACF,CSS"
+           data-color="#2a1f3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2a1f3a,#100a1a)">
+          <span class="project-thumb-initials">CNCS</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Musée</span><span class="project-tag">WordPress</span></div>
+          <h3 class="project-name">Centre National du Costume de Scène</h3>
+          <p class="project-desc">Site vitrine du musée national dédié au costume de scène.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2" data-cat="web"
+           data-title="Océa Concept"
+           data-type="FINANCE"
+           data-desc="L'expert retraite des entreprises et des dirigeants. Site institutionnel avec calcul de retraite, espace client et génération de rapports PDF."
+           data-tags="PHP,MySQL,jQuery,API"
+           data-color="#1a2a3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a2a3a,#080f18)">
+          <span class="project-thumb-initials">OC</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Finance</span><span class="project-tag">PHP</span></div>
+          <h3 class="project-name">Océa Concept</h3>
+          <p class="project-desc">L'expert retraite des entreprises et des dirigeants.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ecommerce"
+           data-title="Ann Gérard – Parfums"
+           data-type="PRESTASHOP · LUXE"
+           data-desc="Site PrestaShop pour la créatrice de fragrances et de joailleries Ann Gérard. Expérience utilisateur haut de gamme, multilingue et optimisé conversion."
+           data-tags="PrestaShop,PHP,MySQL,Multilingue"
+           data-color="#3a2a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a2a1a,#1a1008)">
+          <span class="project-thumb-initials">AG</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">Luxe</span></div>
+          <h3 class="project-name">Ann Gérard – Parfums</h3>
+          <p class="project-desc">Site PrestaShop pour la créatrice de fragrances et de joailleries.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="cms"
+           data-title="SLIB"
+           data-type="FINANCE · CMS"
+           data-desc="Site pour éditeur de logiciels de solutions titres, leader en post-trade. CMS personnalisé avec espace presse, publications réglementaires et gestion des actualités."
+           data-tags="Drupal,PHP,MySQL,Finance"
+           data-color="#1a3a3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a3a3a,#081818)">
+          <span class="project-thumb-initials">SL</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Finance</span><span class="project-tag">Drupal</span></div>
+          <h3 class="project-name">SLIB</h3>
+          <p class="project-desc">Site pour éditeur de logiciels de solutions titres, leader en post-trade.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2" data-cat="web"
+           data-title="NYD Pharma"
+           data-type="MÉDICAL"
+           data-desc="Site vitrine d'une entreprise spécialisée dans le domaine pharmaceutique. Interface professionnelle, catalogue produits et conformité réglementaire."
+           data-tags="WordPress,PHP,ACF"
+           data-color="#1f3a2a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1f3a2a,#0a1812)">
+          <span class="project-thumb-initials">NYD</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Médical</span><span class="project-tag">WordPress</span></div>
+          <h3 class="project-name">NYD Pharma</h3>
+          <p class="project-desc">Site vitrine d'une entreprise spécialisée dans le domaine pharmaceutique.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ecommerce"
+           data-title="Artignac"
+           data-type="PRESTASHOP · ART"
+           data-desc="Boutique en ligne développée avec PrestaShop pour la vente de produits artisanaux et gastronomiques haut de gamme de la région."
+           data-tags="PrestaShop,PHP,MySQL"
+           data-color="#3a2a1f">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a2a1f,#18100a)">
+          <span class="project-thumb-initials">ART</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">Art</span></div>
+          <h3 class="project-name">Artignac</h3>
+          <p class="project-desc">Boutique en ligne développée avec PrestaShop pour produits artisanaux haut de gamme.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="cms"
+           data-title="Stéphanie Murat"
+           data-type="WORDPRESS · CINÉMA"
+           data-desc="Site WordPress de la réalisatrice Stéphanie Murat. Portfolio de films, galerie, agenda des projections et espace presse."
+           data-tags="WordPress,PHP,CSS"
+           data-color="#2a1a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a1a,#120808)">
+          <span class="project-thumb-initials">SM</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">WordPress</span><span class="project-tag">Cinéma</span></div>
+          <h3 class="project-name">Stéphanie Murat</h3>
+          <p class="project-desc">Site WordPress de la réalisatrice Stéphanie Murat. Portfolio films et espace presse.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2" data-cat="ecommerce"
+           data-title="Sports Center"
+           data-type="E-COMMERCE · SPORT"
+           data-desc="Boutique en ligne d'articles de sport haut de gamme. Catalogue produits, gestion des stocks, paiement sécurisé et programme de fidélité."
+           data-tags="PrestaShop,PHP,MySQL"
+           data-color="#1a2a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a2a1a,#081208)">
+          <span class="project-thumb-initials">SC</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">E-Commerce</span><span class="project-tag">Sport</span></div>
+          <h3 class="project-name">Sports Center</h3>
+          <p class="project-desc">Boutique en ligne d'articles de sport haut de gamme.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ecommerce"
+           data-title="Jardins d'Écrivains"
+           data-type="PRESTASHOP · PARFUMS DE NICHE"
+           data-desc="Maison de parfums de niche inspirée de la littérature — boutique PrestaShop multilingue. Expérience poétique et interface luxueuse."
+           data-tags="PrestaShop,PHP,Multilingue"
+           data-color="#2a1f3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2a1f3a,#100a1a)">
+          <span class="project-thumb-initials">JE</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">Parfums</span></div>
+          <h3 class="project-name">Jardins d'Écrivains</h3>
+          <p class="project-desc">Maison de parfums de niche inspirée de la littérature — boutique PrestaShop multilingue.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="ecommerce"
+           data-title="Gantop.fr"
+           data-type="PRESTASHOP"
+           data-desc="Grossiste en produits d'hygiène et d'entretien — site e-commerce B2B avec livraison 72h. Tarification par paliers, catalogue PDF et espace revendeurs."
+           data-tags="PrestaShop,PHP,MySQL,B2B"
+           data-color="#1a1a3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a1a3a,#08081a)">
+          <span class="project-thumb-initials">GT</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">B2B</span></div>
+          <h3 class="project-name">Gantop.fr</h3>
+          <p class="project-desc">Grossiste en produits d'hygiène — e-commerce B2B avec livraison 72h.</p>
+        </div>
+      </div>
+
+      <!-- === CUSTOM PROJECTS === -->
+
+      <div class="project-card reveal delay-2" data-cat="ecommerce"
+           data-title="Boutique Bio En Ligne"
+           data-type="PRESTASHOP · PHP · MYSQL"
+           data-desc="Boutique e-commerce spécialisée dans les produits bio. Développement sur mesure du thème, modules de paiement Stripe et livraison. Optimisation SEO et performances."
+           data-tags="PrestaShop,PHP,MySQL,Stripe"
+           data-color="#1a3a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a3a1a,#081808)">
+          <span class="project-thumb-initials">BIO</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PrestaShop</span><span class="project-tag">PHP</span><span class="project-tag">MySQL</span></div>
+          <h3 class="project-name">Boutique Bio En Ligne</h3>
+          <p class="project-desc">Boutique e-commerce spécialisée dans les produits bio. Thème sur mesure, modules Stripe.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="cms"
+           data-title="Site Institutionnel Groupe BTP"
+           data-type="WORDPRESS · PHP · ACF"
+           data-desc="Site vitrine multilingue pour un groupe de construction. Développement d'un thème enfant, intégration ACF Pro et formulaires avancés. FR/EN/AR."
+           data-tags="WordPress,PHP,ACF,Multilingue"
+           data-color="#2a3a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2a3a1a,#101808)">
+          <span class="project-thumb-initials">BTP</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">WordPress</span><span class="project-tag">PHP</span><span class="project-tag">ACF</span></div>
+          <h3 class="project-name">Site Institutionnel Groupe BTP</h3>
+          <p class="project-desc">Site vitrine multilingue pour un groupe de construction. Thème enfant et ACF Pro.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="custom"
+           data-title="Plateforme de Réservation"
+           data-type="PHP · JQUERY · MYSQL · API"
+           data-desc="Application web de gestion des réservations pour un réseau d'hôtels. Agenda temps réel, notifications email/SMS, exports PDF et tableau de bord analytique."
+           data-tags="PHP,jQuery,MySQL,API REST"
+           data-color="#1a2a3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#1a2a3a,#080f18)">
+          <span class="project-thumb-initials">RES</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">jQuery</span><span class="project-tag">API</span></div>
+          <h3 class="project-name">Plateforme de Réservation</h3>
+          <p class="project-desc">Application de gestion des réservations hôtelières. Agenda temps réel, exports PDF.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-2" data-cat="cms"
+           data-title="Magazine Drupal Actualités"
+           data-type="DRUPAL · PHP · TWIG"
+           data-desc="Magazine d'actualités sous Drupal 9 avec workflow éditorial avancé, gestion des auteurs et flux RSS. Intégration publicités et abonnements premium."
+           data-tags="Drupal,PHP,Twig,RSS"
+           data-color="#3a2a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a2a1a,#181008)">
+          <span class="project-thumb-initials">MAG</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Drupal</span><span class="project-tag">PHP</span><span class="project-tag">Twig</span></div>
+          <h3 class="project-name">Magazine Drupal Actualités</h3>
+          <p class="project-desc">Magazine d'actualités sous Drupal 9 avec workflow éditorial avancé.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="ecommerce"
+           data-title="Magasin Mode Magento"
+           data-type="MAGENTO · PHP · MYSQL"
+           data-desc="Boutique de mode sous Magento 2. Modules sur mesure, intégration ERP et optimisation des performances. Gestion multi-boutiques et multi-devises."
+           data-tags="Magento,PHP,MySQL,ERP"
+           data-color="#2a1a3a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#2a1a3a,#10081a)">
+          <span class="project-thumb-initials">MGT</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">Magento</span><span class="project-tag">PHP</span><span class="project-tag">MySQL</span></div>
+          <h3 class="project-name">Magasin Mode Magento</h3>
+          <p class="project-desc">Boutique de mode sous Magento 2 avec intégration ERP et multi-boutiques.</p>
+        </div>
+      </div>
+
+      <div class="project-card reveal delay-1" data-cat="custom"
+           data-title="CRM Agence Immobilière"
+           data-type="PHP · JQUERY · BOOTSTRAP · MYSQL"
+           data-desc="CRM complet pour une agence immobilière : gestion des biens, clients, visites, contrats et statistiques. Tableau de bord avec graphiques temps réel."
+           data-tags="PHP,jQuery,Bootstrap,MySQL"
+           data-color="#3a1a1a">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#3a1a1a,#180808)">
+          <span class="project-thumb-initials">CRM</span>
+          <div class="project-thumb-overlay"><span>Voir le projet</span></div>
+        </div>
+        <div class="project-body">
+          <div class="project-tags"><span class="project-tag">PHP</span><span class="project-tag">jQuery</span><span class="project-tag">Bootstrap</span></div>
+          <h3 class="project-name">CRM Agence Immobilière</h3>
+          <p class="project-desc">CRM complet : biens, clients, visites, contrats et statistiques en temps réel.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     PROJECT MODAL
+============================= -->
+<div id="project-modal">
+  <div id="modal-backdrop"></div>
+  <div class="modal-box">
+    <button id="modal-close">&#x2715;</button>
+    <div id="modal-image"></div>
+    <div class="modal-content">
+      <div class="modal-type" id="modal-type"></div>
+      <h3 id="modal-title"></h3>
+      <p id="modal-desc"></p>
+      <div id="modal-tags"></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================
+     EXPERIENCE
+============================= -->
+<section id="experience">
+  <div class="container">
+    <div class="section-label"><span data-i18n="nav_experience">Expérience</span></div>
+    <h2 class="section-title" data-i18n="exp_title">Parcours professionnel</h2>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <span class="timeline-title" data-i18n="exp1_title">Développeur Freelance</span>
+            <span class="timeline-date">2015 — <span data-i18n="exp_present">Présent</span></span>
+          </div>
+          <p class="timeline-desc" data-i18n="exp1_desc">Développement de sites et applications web pour des clients en France, Belgique, Suisse et Tunisie. Spécialisation WordPress, PrestaShop, PHP sur mesure.</p>
+          <div class="timeline-tags">
+            <span class="ttag">WordPress</span>
+            <span class="ttag">PrestaShop</span>
+            <span class="ttag">PHP</span>
+            <span class="ttag">jQuery</span>
+            <span class="ttag">Tailwind CSS</span>
+            <span class="ttag">Drupal</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal delay-1">
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <span class="timeline-title" data-i18n="exp2_title">Développeur PHP Senior</span>
+            <span class="timeline-date">2010 — 2015</span>
+          </div>
+          <p class="timeline-desc" data-i18n="exp2_desc">Développement d'applications métier complexes, intégration de systèmes de paiement, APIs tierces et solutions e-commerce.</p>
+          <div class="timeline-tags">
+            <span class="ttag">PHP</span>
+            <span class="ttag">MySQL</span>
+            <span class="ttag">Magento</span>
+            <span class="ttag">API REST</span>
+            <span class="ttag">Linux</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-item reveal delay-2">
+        <div class="timeline-card">
+          <div class="timeline-head">
+            <span class="timeline-title" data-i18n="exp3_title">Formation &amp; Licence Informatique</span>
+            <span class="timeline-date">2009 — 2010</span>
+          </div>
+          <p class="timeline-desc" data-i18n="exp3_desc">Licence en Informatique. Maîtrise des langages web, bases de données et architecture logicielle. Auto-formation continue en PHP, JavaScript et DevOps.</p>
+          <div class="timeline-tags">
+            <span class="ttag">Informatique</span>
+            <span class="ttag">Web</span>
+            <span class="ttag">Auto-formation</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     CONTACT
+============================= -->
+<section id="contact">
+  <div class="container">
+    <div class="section-label"><span data-i18n="nav_contact">Contact</span></div>
+    <h2 class="section-title" data-i18n="contact_title">Me contacter</h2>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info">
+
+        <a href="mailto:hichem.chalgoumi.apple@gmail.com" class="contact-item reveal">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_email_label">Email</div>
+            <div class="contact-item-value">hichem.chalgoumi.apple@gmail.com</div>
+          </div>
+        </a>
+
+        <a href="tel:+21653402601" class="contact-item reveal delay-1">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013 5.18 2 2 0 015 3h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L9.91 10a16 16 0 006.09 6.09l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_phone_label">Téléphone</div>
+            <div class="contact-item-value" data-i18n="about_phone">+216 53 402 601</div>
+          </div>
+        </a>
+
+        <div class="contact-item reveal delay-2">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_location_label">Localisation</div>
+            <div class="contact-item-value" data-i18n="about_location">Bizerte, Tunisie</div>
+          </div>
+        </div>
+
+        <a href="https://www.linkedin.com/in/chalgoumi-hichem" target="_blank" rel="noopener" class="contact-item reveal delay-3">
+          <div class="contact-item-icon">
+            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
+            </svg>
+          </div>
+          <div>
+            <div class="contact-item-label" data-i18n="contact_linkedin_label">LinkedIn</div>
+            <div class="contact-item-value">chalgoumi-hichem</div>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Form -->
+      <div class="reveal delay-1">
+        <form id="contact-form" class="contact-form">
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_name_ph">Votre nom</label>
+            <input id="c-name" type="text" class="form-input" placeholder="Votre nom" required data-i18n-ph="contact_name_ph" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_email_ph">Votre e-mail</label>
+            <input id="c-email" type="email" class="form-input" placeholder="Votre e-mail" required data-i18n-ph="contact_email_ph" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" data-i18n="contact_message_ph">Votre message</label>
+            <textarea id="c-message" class="form-input" placeholder="Votre message" required data-i18n-ph="contact_message_ph"></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width:fit-content">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+            <span data-i18n="contact_send">Envoyer</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================
+     FOOTER
+============================= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="nav-logo">&#60; HC /&#62;</a>
+        <p data-i18n="footer_tagline">Développeur Web PHP Senior</p>
+        <p>&#128205; <span data-i18n="about_location">Bizerte, Tunisie</span></p>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer_nav">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="#about"      data-i18n="nav_about">À propos</a></li>
+          <li><a href="#skills"     data-i18n="nav_skills">Compétences</a></li>
+          <li><a href="#projects"   data-i18n="nav_projects">Réalisations</a></li>
+          <li><a href="#experience" data-i18n="nav_experience">Expérience</a></li>
+          <li><a href="#contact"    data-i18n="nav_contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title" data-i18n="footer_social">Réseaux</div>
+        <ul class="footer-links">
+          <li><a href="https://www.linkedin.com/in/chalgoumi-hichem" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="mailto:hichem.chalgoumi.apple@gmail.com">Email</a></li>
+          <li><a href="https://github.com/Hichem-chalgoumi" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>&#169; 2026 Hichem Chalghoumi. <span data-i18n="footer_rights">Tous droits réservés.</span></span>
+      <span><span data-i18n="footer_made">Développé en HTML/CSS/JS</span> &middot; <a href="https://github.com/Hichem-chalgoumi/portfolio" target="_blank" rel="noopener" data-i18n="footer_deployed">Déployé sur GitHub</a></span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="js/translations.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
